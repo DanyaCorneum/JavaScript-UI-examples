@@ -39,7 +39,7 @@ function closeModal(modal) {
       targets: modal.children[0],
       margin: "0 auto",
       opacity: 0,
-      duration: 600,
+      duration: 0,
       easing: "easeInOutQuad",
     });
     modal.classList.remove("open");
