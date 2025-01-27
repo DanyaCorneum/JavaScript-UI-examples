@@ -21,6 +21,13 @@ function removeModalEvents(modal) {
 function openModal(modal) {
   function open() {
     modal.classList.add("open");
+    anime({
+      targets: modal.children[0],
+      margin: "15% auto",
+      opacity: 1,
+      duration: 550,
+      easing: "easeInOutQuad",
+    });
     addModalEvents(modal);
   }
   return open;
@@ -28,7 +35,15 @@ function openModal(modal) {
 
 function closeModal(modal) {
   function close() {
+    anime({
+      targets: modal.children[0],
+      margin: "0 auto",
+      opacity: 0,
+      duration: 600,
+      easing: "easeInOutQuad",
+    });
     modal.classList.remove("open");
+
     removeModalEvents(modal);
   }
   return close;
