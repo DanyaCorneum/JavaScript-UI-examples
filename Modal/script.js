@@ -43,7 +43,6 @@ function closeModal(modal) {
       easing: "easeInOutQuad",
     });
     modal.classList.remove("open");
-
     removeModalEvents(modal);
   }
   return close;
